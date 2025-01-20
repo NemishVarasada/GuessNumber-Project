@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1>Number Guessing Game</h1>
+            
+        </div>
+    </nav>
+
+    <div id="wrapper">
+        <h1 id="game">Guess the Number!</h1>
+        <p>Try to guess the random number between 1 and 100.</p>
+        <p>You have 10 attempts to guess correctly.</p>
+
+        <form class="form">
+            <label for="guessField" id="guess">Enter Your Guess</label>
+            <input 
+                type="number" 
+                id="guessField" 
+                class="guessField" 
+                placeholder="1 to 100" 
+                min="1" 
+                max="100" 
+                required
+            >
+            <button type="submit" id="subt" class="guessSubmit">Submit Guess</button>
+        </form>
+
+        <div class="resultParas">
+            <p>Previous Guesses: <span class="guesses"></span></p>
+            <p>Guesses Remaining: <span class="lastResult">10</span></p>
+            <p class="lowOrHi"></p>
+        </div>
+    </div>
+
+    <section id="guide">
+        <h2>Game Rules</h2>
+        <ul>
+            <li>Enter a number between 1 and 100.</li>
+            <li>You have a maximum of 10 attempts.</li>
+            <li>Feedback will guide you if your guess is too high or too low.</li>
+            <li>Have fun and good luck!</li>
+        </ul>
+    </section>
+
+    <script src="game.js"></script>
+</body>
+</html>
